@@ -1,0 +1,44 @@
+/* Style général */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1e3b70, #29578a, #3a75b6, #a0d3e8);
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Canvas pour le ciel et les flocons */
+#skyCanvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Les flocons et le Père Noël sont au-dessus de la ville */
+}
+
+/* Section de la ville */
+#christmasScene {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%; /* La ville occupe 50% de la hauteur */
+    z-index: 1; /* La ville est en arrière-plan */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Bannière de la ville */
+#cityBanner {
+    width: 100%;
+    height: 100%;
+    background: url('https://i.ibb.co/0p0Wzrk/DALL-E-2024-12-02-23-27.png') no-repeat center center;
+    background-size: cover; /* L'image couvre toute la largeur et hauteur */
+    background-position: bottom; /* Aligné en bas pour donner un effet naturel */
+}
